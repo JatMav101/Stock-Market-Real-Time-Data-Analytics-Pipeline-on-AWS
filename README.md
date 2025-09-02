@@ -26,22 +26,27 @@ Steps performed:
 
 
 Services Used 
+
 Amazon Kinesis Data Streams – Ingests stock data in real-time.
+
 AWS Lambda – Processes stock data and detects stock trends.
+
 Amazon DynamoDB – Stores structured stock data for quick lookups.
+
 Amazon S3 – Stores raw stock data for historical analysis.
+
 Amazon Athena – Queries stock data directly from S3.
+
 Amazon SNS – Sends stock trend alerts via Email/SMS.
+
 IAM Roles & Policies – Manages permissions securely.
 
 
-
 This is the architectural diagram for the project:
-
 <img width="801" height="408" alt="image" src="https://github.com/user-attachments/assets/87ec7354-097c-439e-a1f4-539793bdf0c7" />
 
 
-Final Result
+Final Result:
 A fully functional near real-time stock analytics pipeline built using AWS services, featuring:
 
 Event-driven architecture with Amazon Kinesis for real-time data ingestion
