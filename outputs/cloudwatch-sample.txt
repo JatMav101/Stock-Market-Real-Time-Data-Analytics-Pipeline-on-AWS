@@ -1,0 +1,212 @@
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 97, in post_init_error
+self.call_rapid(
+~~~~~~~~~~~~~~~^
+"POST", endpoint, http.HTTPStatus.ACCEPTED, error_response_data, headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 77, in call_rapid
+runtime_connection.request(
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+http_method, endpoint, to_json(payload), headers=headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/http/client.py", line 1338, in request
+self._send_request(method, url, body, headers, encode_chunked)
+~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/http/client.py", line 1383, in _send_request
+body = _encode(body, 'body')
+File "/var/lang/lib/python3.13/http/client.py", line 166, in _encode
+raise UnicodeEncodeError(
+...<6 lines>...
+(name.title(), data[err.start:err.end], name)) from None
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u200b' in position 259: Body ('\u200b') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+INIT_REPORT Init Duration: 97.44 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+START RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec Version: $LATEST
+END RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec
+REPORT RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec	Duration: 109.01 ms	Billed Duration: 110 ms	Memory Size: 128 MB	Max Memory Used: 45 MB	Status: error	Error Type: Runtime.ExitError
+[WARNING]	2025-09-02T19:59:30.143Z		LAMBDA_WARNING: Unhandled exception. The most likely cause is an issue in the function code. However, in rare cases, a Lambda runtime update can cause unexpected function behavior. For functions using managed runtimes, runtime updates can be triggered by a function change, or can be applied automatically. To determine if the runtime has been updated, check the runtime version in the INIT_START log entry. If this error correlates with a change in the runtime version, you may be able to mitigate this error by temporarily rolling back to the previous runtime version. For more information, see https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html
+[ERROR] Runtime.UserCodeSyntaxError: Syntax error in module 'lambda_function': invalid non-printable character U+200B (lambda_function.py, line 5)
+Traceback (most recent call last):
+  File "/var/task/lambda_function.py" Line 5
+    ​
+Traceback (most recent call last):
+File "/var/runtime/bootstrap.py", line 63, in <module>
+main()
+~~~~^^
+File "/var/runtime/bootstrap.py", line 60, in main
+awslambdaricmain.main([os.environ["LAMBDA_TASK_ROOT"], os.environ["_HANDLER"]])
+~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/__main__.py", line 21, in main
+bootstrap.run(app_root, handler, lambda_runtime_api_addr)
+~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/bootstrap.py", line 514, in run
+lambda_runtime_client.post_init_error(error_result)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 97, in post_init_error
+self.call_rapid(
+~~~~~~~~~~~~~~~^
+"POST", endpoint, http.HTTPStatus.ACCEPTED, error_response_data, headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 77, in call_rapid
+runtime_connection.request(
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+http_method, endpoint, to_json(payload), headers=headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/http/client.py", line 1338, in request
+self._send_request(method, url, body, headers, encode_chunked)
+~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/http/client.py", line 1383, in _send_request
+body = _encode(body, 'body')
+File "/var/lang/lib/python3.13/http/client.py", line 166, in _encode
+raise UnicodeEncodeError(
+...<6 lines>...
+(name.title(), data[err.start:err.end], name)) from None
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u200b' in position 259: Body ('\u200b') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+INIT_REPORT Init Duration: 93.60 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+START RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec Version: $LATEST
+END RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec
+REPORT RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec	Duration: 105.39 ms	Billed Duration: 106 ms	Memory Size: 128 MB	Max Memory Used: 45 MB	Status: error	Error Type: Runtime.ExitError
+[WARNING]	2025-09-02T20:00:30.655Z		LAMBDA_WARNING: Unhandled exception. The most likely cause is an issue in the function code. However, in rare cases, a Lambda runtime update can cause unexpected function behavior. For functions using managed runtimes, runtime updates can be triggered by a function change, or can be applied automatically. To determine if the runtime has been updated, check the runtime version in the INIT_START log entry. If this error correlates with a change in the runtime version, you may be able to mitigate this error by temporarily rolling back to the previous runtime version. For more information, see https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html
+[ERROR] Runtime.UserCodeSyntaxError: Syntax error in module 'lambda_function': invalid non-printable character U+200B (lambda_function.py, line 5)
+Traceback (most recent call last):
+  File "/var/task/lambda_function.py" Line 5
+    ​
+Traceback (most recent call last):
+File "/var/runtime/bootstrap.py", line 63, in <module>
+main()
+~~~~^^
+File "/var/runtime/bootstrap.py", line 60, in main
+awslambdaricmain.main([os.environ["LAMBDA_TASK_ROOT"], os.environ["_HANDLER"]])
+~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/__main__.py", line 21, in main
+bootstrap.run(app_root, handler, lambda_runtime_api_addr)
+~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/bootstrap.py", line 514, in run
+lambda_runtime_client.post_init_error(error_result)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 97, in post_init_error
+self.call_rapid(
+~~~~~~~~~~~~~~~^
+"POST", endpoint, http.HTTPStatus.ACCEPTED, error_response_data, headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 77, in call_rapid
+runtime_connection.request(
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+http_method, endpoint, to_json(payload), headers=headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/http/client.py", line 1338, in request
+self._send_request(method, url, body, headers, encode_chunked)
+~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/http/client.py", line 1383, in _send_request
+body = _encode(body, 'body')
+File "/var/lang/lib/python3.13/http/client.py", line 166, in _encode
+raise UnicodeEncodeError(
+...<6 lines>...
+(name.title(), data[err.start:err.end], name)) from None
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u200b' in position 259: Body ('\u200b') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+INIT_REPORT Init Duration: 95.87 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+START RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec Version: $LATEST
+END RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec
+REPORT RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec	Duration: 107.24 ms	Billed Duration: 108 ms	Memory Size: 128 MB	Max Memory Used: 45 MB	Status: error	Error Type: Runtime.ExitError
+[WARNING]	2025-09-02T20:01:35.062Z		LAMBDA_WARNING: Unhandled exception. The most likely cause is an issue in the function code. However, in rare cases, a Lambda runtime update can cause unexpected function behavior. For functions using managed runtimes, runtime updates can be triggered by a function change, or can be applied automatically. To determine if the runtime has been updated, check the runtime version in the INIT_START log entry. If this error correlates with a change in the runtime version, you may be able to mitigate this error by temporarily rolling back to the previous runtime version. For more information, see https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html
+[ERROR] Runtime.UserCodeSyntaxError: Syntax error in module 'lambda_function': invalid non-printable character U+200B (lambda_function.py, line 5)
+Traceback (most recent call last):
+  File "/var/task/lambda_function.py" Line 5
+    ​
+Traceback (most recent call last):
+File "/var/runtime/bootstrap.py", line 63, in <module>
+main()
+~~~~^^
+File "/var/runtime/bootstrap.py", line 60, in main
+awslambdaricmain.main([os.environ["LAMBDA_TASK_ROOT"], os.environ["_HANDLER"]])
+~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/__main__.py", line 21, in main
+bootstrap.run(app_root, handler, lambda_runtime_api_addr)
+~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/bootstrap.py", line 514, in run
+lambda_runtime_client.post_init_error(error_result)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 97, in post_init_error
+self.call_rapid(
+~~~~~~~~~~~~~~~^
+"POST", endpoint, http.HTTPStatus.ACCEPTED, error_response_data, headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 77, in call_rapid
+runtime_connection.request(
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+http_method, endpoint, to_json(payload), headers=headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/http/client.py", line 1338, in request
+self._send_request(method, url, body, headers, encode_chunked)
+~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/http/client.py", line 1383, in _send_request
+body = _encode(body, 'body')
+File "/var/lang/lib/python3.13/http/client.py", line 166, in _encode
+raise UnicodeEncodeError(
+...<6 lines>...
+(name.title(), data[err.start:err.end], name)) from None
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u200b' in position 259: Body ('\u200b') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+INIT_REPORT Init Duration: 90.88 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+START RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec Version: $LATEST
+END RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec
+REPORT RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec	Duration: 103.33 ms	Billed Duration: 104 ms	Memory Size: 128 MB	Max Memory Used: 45 MB	Status: error	Error Type: Runtime.ExitError
+[WARNING]	2025-09-02T20:02:37.112Z		LAMBDA_WARNING: Unhandled exception. The most likely cause is an issue in the function code. However, in rare cases, a Lambda runtime update can cause unexpected function behavior. For functions using managed runtimes, runtime updates can be triggered by a function change, or can be applied automatically. To determine if the runtime has been updated, check the runtime version in the INIT_START log entry. If this error correlates with a change in the runtime version, you may be able to mitigate this error by temporarily rolling back to the previous runtime version. For more information, see https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html
+[ERROR] Runtime.UserCodeSyntaxError: Syntax error in module 'lambda_function': invalid non-printable character U+200B (lambda_function.py, line 5)
+Traceback (most recent call last):
+  File "/var/task/lambda_function.py" Line 5
+    ​
+Traceback (most recent call last):
+File "/var/runtime/bootstrap.py", line 63, in <module>
+main()
+~~~~^^
+File "/var/runtime/bootstrap.py", line 60, in main
+awslambdaricmain.main([os.environ["LAMBDA_TASK_ROOT"], os.environ["_HANDLER"]])
+~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/__main__.py", line 21, in main
+bootstrap.run(app_root, handler, lambda_runtime_api_addr)
+~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/bootstrap.py", line 514, in run
+lambda_runtime_client.post_init_error(error_result)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 97, in post_init_error
+self.call_rapid(
+~~~~~~~~~~~~~~~^
+"POST", endpoint, http.HTTPStatus.ACCEPTED, error_response_data, headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/site-packages/awslambdaric/lambda_runtime_client.py", line 77, in call_rapid
+runtime_connection.request(
+~~~~~~~~~~~~~~~~~~~~~~~~~~^
+http_method, endpoint, to_json(payload), headers=headers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+)
+^
+File "/var/lang/lib/python3.13/http/client.py", line 1338, in request
+self._send_request(method, url, body, headers, encode_chunked)
+~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/var/lang/lib/python3.13/http/client.py", line 1383, in _send_request
+body = _encode(body, 'body')
+File "/var/lang/lib/python3.13/http/client.py", line 166, in _encode
+raise UnicodeEncodeError(
+...<6 lines>...
+(name.title(), data[err.start:err.end], name)) from None
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u200b' in position 259: Body ('\u200b') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+INIT_REPORT Init Duration: 95.83 ms	Phase: invoke	Status: error	Error Type: Runtime.ExitError
+START RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec Version: $LATEST
+END RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec
+REPORT RequestId: 9bb5130b-067d-4a0e-a684-c4bc297761ec	Duration: 106.38 ms	Billed Duration: 107 ms	Memory Size: 128 MB	Max Memory Used: 45 MB	Status: error	Error Type: Runtime.ExitError
