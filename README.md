@@ -1,4 +1,5 @@
-Overview of Project ☁️
+Overview of Project:
+
 This project builds a real-time stock market data analytics pipeline using AWS, leveraging event-driven architecture and serverless technologies. The architecture ingests, processes, stores, and analyzes stock market data in real-time while minimizing costs. .
 
 
@@ -12,8 +13,6 @@ Querying historical data using Amazon Athena.
 Sending real-time stock trend alerts using AWS Lambda & Amazon SNS (Email/SMS).
 
 In this project, I learnt how to integrate various AWS services to create a streamlined CI/CD workflow, reducing manual intervention and enabling faster, reliable application deployment.
-
-
 
 Steps performed:
 
@@ -40,8 +39,6 @@ Diagram
 This is the architectural diagram for the project:
 
 <img width="801" height="408" alt="image" src="https://github.com/user-attachments/assets/87ec7354-097c-439e-a1f4-539793bdf0c7" />
-
-
 
 
 Final Result
