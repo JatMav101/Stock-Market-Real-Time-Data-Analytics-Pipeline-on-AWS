@@ -35,7 +35,7 @@ Services Used
  IAM Roles & Policies – Manages permissions securely.
 
 
-Diagram
+
 This is the architectural diagram for the project:
 
 <img width="801" height="408" alt="image" src="https://github.com/user-attachments/assets/87ec7354-097c-439e-a1f4-539793bdf0c7" />
