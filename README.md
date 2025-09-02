@@ -26,13 +26,13 @@ Steps performed:
 
 
 Services Used 
- Amazon Kinesis Data Streams – Ingests stock data in real-time.
- AWS Lambda – Processes stock data and detects stock trends.
- Amazon DynamoDB – Stores structured stock data for quick lookups.
- Amazon S3 – Stores raw stock data for historical analysis.
- Amazon Athena – Queries stock data directly from S3.
- Amazon SNS – Sends stock trend alerts via Email/SMS.
- IAM Roles & Policies – Manages permissions securely.
+Amazon Kinesis Data Streams – Ingests stock data in real-time.
+AWS Lambda – Processes stock data and detects stock trends.
+Amazon DynamoDB – Stores structured stock data for quick lookups.
+Amazon S3 – Stores raw stock data for historical analysis.
+Amazon Athena – Queries stock data directly from S3.
+Amazon SNS – Sends stock trend alerts via Email/SMS.
+IAM Roles & Policies – Manages permissions securely.
 
 
 
